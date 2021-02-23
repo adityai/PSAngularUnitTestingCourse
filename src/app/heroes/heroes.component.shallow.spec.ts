@@ -49,7 +49,6 @@ describe('HeroesComponent (shallow tests)', () => {
       fixture.detectChanges();
 
       expect(fixture.debugElement.queryAll(By.css('li')).length).toBe(3);
-
     });
   });
 
