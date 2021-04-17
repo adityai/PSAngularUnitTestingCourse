@@ -62,3 +62,17 @@ Paid tool. Allows you to see the code coverage of your tests right in your IDE.
 ##### Cypress
 Traditionally considered to be a end-to-end testing tool, but new features are geared towards unit testing.
 
+### Structuring Tests
+AAA pattern.
+
+- Arrange necessary preconditions and inputs
+- Act on the object or class under test
+- Assert that the expected results have occurred
+
+### DAMP vs DRY
+#### DRY
+Don't repeat yourself. Removes duplication.
+
+#### DAMP
+Same as dry, but repeat yourself when necessary.
+
