@@ -76,3 +76,6 @@ Don't repeat yourself. Removes duplication.
 #### DAMP
 Same as dry, but repeat yourself when necessary.
 
+### What is TestBed
+Allows us to test a component and its template running together.
+
