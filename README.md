@@ -79,3 +79,8 @@ Same as dry, but repeat yourself when necessary.
 ### What is TestBed
 Allows us to test a component and its template running together.
 
+## TODO:
+The following sections are not clearly explained and demo doesn't work. 
+- Mocking an injected service
+- Mocking child components
+- Dealing with Lists of elements

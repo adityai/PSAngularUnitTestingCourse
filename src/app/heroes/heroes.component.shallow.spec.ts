@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { By } from "@angular/platform-browser";
 import { of } from "rxjs";
 import { HeroService } from "../hero.service";
 import { HeroesComponent } from "./heroes.component"
@@ -32,6 +33,13 @@ describe('HeroesComponent (shallow tests', () => {
             // Not failing at all
             expect(fixture.componentInstance.heroes.length).toBe(4);
         });
+
+        it('should create one li for each hero', () => {
+            mockHeroService.getHeroes.and.returnValue(of(HEROES))
+            fixture.detectChanges();
+
+            expect(fixture.debugElement.queryAll(By.css('li')).length).toBe(3);
+        })
     })
 })
 
