@@ -1,5 +1,6 @@
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing"
+import { By } from "@angular/platform-browser";
 import { HeroComponent } from "./hero.component"
 
 describe('HeroComponent (shallow tests', () => {
@@ -24,6 +25,10 @@ describe('HeroComponent (shallow tests', () => {
         fixture.componentInstance.hero = { id: 1, name: 'SuperDude', strength: 3 };
         // execute change detection to implement the bindings in the html
         fixture.detectChanges();
+
+        // debugElement is a wrapper around the dom node
+        let debugElementA = fixture.debugElement.query(By.css('a'));
+        expect(debugElementA.nativeElement.textContent).toContain('SuperDude');
 
         // nativeElement: standard html dom element
         // querySelector: To select specific dom element by tag
